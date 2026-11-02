@@ -1,19 +1,14 @@
 ﻿using HarmonyLib;
 using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
-namespace InteractionSpotOnChunk
+namespace InteractionSpotOnX
 {
 
     [HarmonyPatch(typeof(GenConstruct), nameof(GenConstruct.InteractionCellStandable))]
     public static class Patch_InteractionCellStandable
     {
-        private static ISOCModSettings Settings => LoadedModManager.GetMod<InteractionSpotOnChunk>()?.GetSettings<ISOCModSettings>() ?? InteractionSpotOnChunk.settings;
+        private static ISOXModSettings Settings => LoadedModManager.GetMod<InteractionSpotOnX>()?.GetSettings<ISOXModSettings>() ?? InteractionSpotOnX.settings;
 
         static void Postfix(ThingDef thingDef, IntVec3 center, Rot4 rot, Map map, ref AcceptanceReport __result)
         {
@@ -62,7 +57,7 @@ namespace InteractionSpotOnChunk
             }
 
             if (Settings.debugMode)
-                Log.Message($"[InteractionSpotOnChunk] Allowing placement - Interaction spot contains '{blocker.def.label}'");
+                Log.Message($"[InteractionSpotOnX] Allowing placement - Interaction spot contains '{blocker.def.label}'");
             __result = AcceptanceReport.WasAccepted;
         }
 

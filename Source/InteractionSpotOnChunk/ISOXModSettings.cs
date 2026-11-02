@@ -1,8 +1,8 @@
 ﻿using Verse;
 
-namespace InteractionSpotOnChunk
+namespace InteractionSpotOnX
 {
-    public class ISOCModSettings : ModSettings
+    public class ISOXModSettings : ModSettings
     {
         public bool debugMode = false;
         public bool placeOnChunk = true;

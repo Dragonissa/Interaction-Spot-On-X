@@ -2,20 +2,20 @@
 using System;
 using Verse;
 
-namespace InteractionSpotOnChunk
+namespace InteractionSpotOnX
 {
-    public class InteractionSpotOnChunk : Mod
+    public class InteractionSpotOnX : Mod
     {
-        public static ISOCModSettings settings;
-        public InteractionSpotOnChunk(ModContentPack content) : base(content)
+        public static ISOXModSettings settings;
+        public InteractionSpotOnX(ModContentPack content) : base(content)
         {
-            settings = GetSettings<ISOCModSettings>();
-            new Harmony("dragonissa.InteractionSpotOnChunk").PatchAll();
+            settings = GetSettings<ISOXModSettings>();
+            new Harmony("dragonissa.InteractionSpotOnX").PatchAll();
         }
 
         public override string SettingsCategory()
         {
-            return "Interaction Spot On Chunk";
+            return "Interaction Spot On X";
         }
 
         public override void DoSettingsWindowContents(UnityEngine.Rect inRect)

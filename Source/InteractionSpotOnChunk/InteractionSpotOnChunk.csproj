@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <AssemblyName>InteractionSpotOnChunk</AssemblyName>
+	  <AssemblyName>InteractionSpotOnX</AssemblyName>
 	  <TargetFramework>net4.7.2</TargetFramework>
   </PropertyGroup>
 
@@ -19,7 +19,7 @@
 
   <!-- Path to copy the final DLL to -->
   <PropertyGroup>
-	  <RimWorldModsAssemblies>E:\SteamLibrary\steamapps\common\RimWorld\Mods\Interaction Spot On Chunk\Assemblies</RimWorldModsAssemblies>
+	  <RimWorldModsAssemblies>E:\SteamLibrary\steamapps\common\RimWorld\Mods\Interaction Spot On X\Assemblies</RimWorldModsAssemblies>
   </PropertyGroup>
 
   <!-- Copy the built DLL to the RimWorld Mods Assemblies folder after build -->
