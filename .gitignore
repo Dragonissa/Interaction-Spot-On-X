@@ -1,5 +1,5 @@
 .git
 .vs
 Assemblies/Release
-Source/InteractionSpotOnChunk/bin
-Source/InteractionSpotOnChunk/obj
+Source/obj
+Source/bin
