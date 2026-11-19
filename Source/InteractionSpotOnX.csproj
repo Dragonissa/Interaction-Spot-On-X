@@ -17,16 +17,8 @@
 	  </Reference>
   </ItemGroup>
 
-  <!-- Path to copy the final DLL to -->
-  <PropertyGroup>
-	  <RimWorldModsAssemblies>E:\SteamLibrary\steamapps\common\RimWorld\Mods\Interaction Spot On X\Assemblies</RimWorldModsAssemblies>
-  </PropertyGroup>
-
-  <!-- Copy the built DLL to the RimWorld Mods Assemblies folder after build -->
-  <Target Name="CopyToRimWorldAssemblies" AfterTargets="Build">
-	  <Message Text="Copying $(TargetPath) to $(RimWorldModsAssemblies)" Importance="High" />
-	  <MakeDir Directories="$(RimWorldModsAssemblies)" Condition="!Exists('$(RimWorldModsAssemblies)')" />
-	  <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(RimWorldModsAssemblies)" SkipUnchangedFiles="true" />
-  </Target>
+	<Target Name="CopyToRimWorldAssemblies" AfterTargets="Build">
+		<Exec Command='powershell -ExecutionPolicy Bypass -NoProfile -File "$(ProjectDir)Deploy-RimWorldMod.ps1" -SourceDll "$(TargetPath)" -ModName "$(AssemblyName)"' />
+	</Target>
 
 </Project>
